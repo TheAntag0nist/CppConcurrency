@@ -1,4 +1,4 @@
-#include <example.h>
+#include <core/Example.h>
 
 std::ostream& operator<<(std::ostream& os, const Example& ex) {
 	os << "Id :" << ex.GetId() << std::endl;

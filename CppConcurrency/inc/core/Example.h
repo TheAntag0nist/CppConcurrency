@@ -12,7 +12,6 @@ protected:
 public:
 	Example() = default;
 	virtual ~Example() = default;
-
 	virtual void Run() = 0;
 
 	uint32_t GetId() const;
@@ -21,5 +20,7 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& os, const Example& ex);
 };
+
+typedef std::shared_ptr<Example> ExamplePtr;
 
 #endif

@@ -19,13 +19,17 @@ include_directories(./CppConcurrency/inc)
 set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/BaseExample.cpp
 	./CppConcurrency/src/examples/CallExample.cpp
+	./CppConcurrency/src/examples/JoinExample.cpp
 )
 
 # Source Files
 set(SOURCE_FILES
 	./CppConcurrency/src/main.cpp
-	./CppConcurrency/src/Example.cpp
-	./CppConcurrency/src/ExamplesManager.cpp
+	./CppConcurrency/src/core/App.cpp
+	./CppConcurrency/src/core/Example.cpp
+	./CppConcurrency/src/core/Command.cpp
+	./CppConcurrency/src/core/AppCommands.cpp
+	./CppConcurrency/src/core/ExamplesManager.cpp
 
 	${EXAMPLES_SOURCE_FILES}
 )
