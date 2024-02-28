@@ -1,6 +1,7 @@
 #ifndef CLASS_CALL_OPERATOR_H
 #define CLASS_CALL_OPERATOR_H
-#include <Example.h>
+#include <core/Singleton.h>
+#include <core/Example.h>
 
 class Call {
 public:
@@ -9,11 +10,13 @@ public:
 	}
 };
 
-class CallExample : public Example {
-public:
+class CallExample : public Example, public Singleton<CallExample> {
+protected:
 	CallExample();
-	virtual ~CallExample() = default;
+	friend Singleton<CallExample>;
 
+public:
+	virtual ~CallExample() = default;
 	virtual void Run() override;
 };
 

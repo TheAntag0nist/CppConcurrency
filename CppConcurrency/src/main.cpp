@@ -1,17 +1,15 @@
-#include <ExamplesManager.h>
-#include <examples/BaseExample.h>
-#include <examples/CallExample.h>
+#include <core/ExamplesManager.h>
+#include <core/App.h>
 
 int main() {
-	ExampleManager& exManager = ExampleManager::GetInstance();
-	bool isWorking = true;
+	App& app = App::GetInstance();
+	
+	while (app.IsWorking()) {
+		std::string command = "";
+		std::cout << "cpp_concurrent:> ";
+		std::cin >> command;
+		app.ExecuteCommand(command);
+	}
 
-	BaseExample example;
-	example.Run();
-
-	CallExample callExample;
-	callExample.Run();
-
-	std::cout << example;
 	return 0;
 }
