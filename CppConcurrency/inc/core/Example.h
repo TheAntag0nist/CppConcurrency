@@ -10,7 +10,7 @@ protected:
 	uint32_t m_id;
 
 public:
-	Example() = default;
+	Example();
 	virtual ~Example() = default;
 	virtual void Run() = 0;
 

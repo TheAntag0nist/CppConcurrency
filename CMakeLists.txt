@@ -20,12 +20,17 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/BaseExample.cpp
 	./CppConcurrency/src/examples/CallExample.cpp
 	./CppConcurrency/src/examples/JoinExample.cpp
+	./CppConcurrency/src/examples/ThreadGuardExample.cpp
+	./CppConcurrency/src/examples/DetachExample.cpp
+	./CppConcurrency/src/examples/MoveExample.cpp
+	./CppConcurrency/src/examples/FullJoinClassExample.cpp
 )
 
 # Source Files
 set(SOURCE_FILES
 	./CppConcurrency/src/main.cpp
 	./CppConcurrency/src/core/App.cpp
+	./CppConcurrency/src/core/Func.cpp
 	./CppConcurrency/src/core/Example.cpp
 	./CppConcurrency/src/core/Command.cpp
 	./CppConcurrency/src/core/AppCommands.cpp

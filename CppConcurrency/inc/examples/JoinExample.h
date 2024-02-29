@@ -2,14 +2,7 @@
 #define JOIN_EXAMPLE_H
 #include <core/Singleton.h>
 #include <core/Example.h>
-
-struct Func {
-	int& value;
-	Func(int& v) : value(v) { }
-
-	void operator()();
-	void DoSomething();
-};
+#include <core/Func.h>
 
 class JoinExample : public Example, public Singleton<JoinExample> {
 protected:

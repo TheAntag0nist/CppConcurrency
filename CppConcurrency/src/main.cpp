@@ -7,7 +7,7 @@ int main() {
 	while (app.IsWorking()) {
 		std::string command = "";
 		std::cout << "cpp_concurrent:> ";
-		std::cin >> command;
+		std::getline(std::cin, command);
 		app.ExecuteCommand(command);
 	}
 

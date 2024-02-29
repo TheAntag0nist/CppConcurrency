@@ -16,6 +16,7 @@ public:
 	~ExamplesManager() = default;
 	static ExamplesManager& GetInstance();
 
+	void AddExample(ExamplePtr example);
 	const std::vector<ExamplePtr>& GetExamples() const;
 };
 

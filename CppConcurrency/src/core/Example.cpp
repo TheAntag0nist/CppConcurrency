@@ -7,6 +7,11 @@ std::ostream& operator<<(std::ostream& os, const Example& ex) {
 	return os;
 }
 
+Example::Example() {
+	m_name = "Default Example";
+	m_description = "Default Example";
+}
+
 uint32_t Example::m_counter = 0;
 uint32_t Example::GetId() const { return m_id; }
 std::string Example::GetName() const { return m_name; }
