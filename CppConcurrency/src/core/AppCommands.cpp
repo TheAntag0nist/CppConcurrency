@@ -29,7 +29,7 @@ void ShowExamplesCommand::Execute() {
 	ExamplesManager& examplesManager = ExamplesManager::GetInstance();
 	const auto& examples = examplesManager.GetExamples();
 
-	for (ExamplePtr ex : examples) {
+	for (Example* ex : examples) {
 		std::cout << std::right << std::setw(6) << ex->GetId() << ": " 
 				<< std::setw(6) << ex->GetName() << std::endl;
 	}

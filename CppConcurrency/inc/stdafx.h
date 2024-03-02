@@ -4,8 +4,11 @@
 #include <thread>
 #include <mutex>
 
+#include <functional>
+#include <algorithm>
 #include <iostream>
 #include <assert.h>
+#include <numeric>
 #include <sstream>
 #include <ostream>
 #include <iomanip>

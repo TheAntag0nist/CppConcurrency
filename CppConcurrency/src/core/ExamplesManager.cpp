@@ -7,15 +7,19 @@
 #include <examples/DetachExample.h>
 #include <examples/MoveExample.h>
 #include <examples/FullJoinClassExample.h>
+#include <examples/AccumulateExample.h>
+#include <examples/MutexExample.h>
 
 ExamplesManager::ExamplesManager() {
-	m_examples.push_back(ExamplePtr(&BaseExample::GetInstance()));
-	m_examples.push_back(ExamplePtr(&CallExample::GetInstance()));
-	m_examples.push_back(ExamplePtr(&JoinExample::GetInstance()));
-	m_examples.push_back(ExamplePtr(&ThreadGuardExample::GetInstance()));
-	m_examples.push_back(ExamplePtr(&DetachExample::GetInstance()));
-	m_examples.push_back(ExamplePtr(&MoveExample::GetInstance()));
-	m_examples.push_back(ExamplePtr(&FullJoinClassExample::GetInstance()));
+	m_examples.push_back(&BaseExample::GetInstance());
+	m_examples.push_back(&CallExample::GetInstance());
+	m_examples.push_back(&JoinExample::GetInstance());
+	m_examples.push_back(&ThreadGuardExample::GetInstance());
+	m_examples.push_back(&DetachExample::GetInstance());
+	m_examples.push_back(&MoveExample::GetInstance());
+	m_examples.push_back(&FullJoinClassExample::GetInstance());
+	m_examples.push_back(&AccumulateExample::GetInstance());
+	m_examples.push_back(&MutexExample::GetInstance());
 }
 
 ExamplesManager& ExamplesManager::GetInstance() {
@@ -23,10 +27,10 @@ ExamplesManager& ExamplesManager::GetInstance() {
 	return instance;
 }
 
-void ExamplesManager::AddExample(ExamplePtr example) {
-	m_examples.push_back(example);
+void ExamplesManager::AddExample(Example& example) {
+	m_examples.push_back(&example);
 }
 
-const std::vector<ExamplePtr>& ExamplesManager::GetExamples() const {
+const std::vector<Example*>& ExamplesManager::GetExamples() const {
 	return m_examples;
 }

@@ -24,6 +24,8 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/DetachExample.cpp
 	./CppConcurrency/src/examples/MoveExample.cpp
 	./CppConcurrency/src/examples/FullJoinClassExample.cpp
+	./CppConcurrency/src/examples/AccumulateExample.cpp
+	./CppConcurrency/src/examples/MutexExample.cpp
 )
 
 # Source Files
@@ -41,3 +43,4 @@ set(SOURCE_FILES
 
 # Executable
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
