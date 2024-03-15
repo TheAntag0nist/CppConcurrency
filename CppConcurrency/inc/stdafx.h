@@ -15,6 +15,7 @@
 #include <string>
 #include <memory>
 #include <vector>
+#include <stack>
 #include <regex>
 #include <array>
 #include <list>

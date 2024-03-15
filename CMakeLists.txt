@@ -26,6 +26,7 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/FullJoinClassExample.cpp
 	./CppConcurrency/src/examples/AccumulateExample.cpp
 	./CppConcurrency/src/examples/MutexExample.cpp
+	./CppConcurrency/src/examples/SafeStackExample.cpp
 )
 
 # Source Files
