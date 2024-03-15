@@ -10,6 +10,7 @@
 #include <examples/AccumulateExample.h>
 #include <examples/MutexExample.h>
 #include <examples/SafeStackExample.h>
+#include <examples/SwapExample.h>
 
 ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&BaseExample::GetInstance());
@@ -22,6 +23,7 @@ ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&AccumulateExample::GetInstance());
 	m_examples.push_back(&MutexExample::GetInstance());
 	m_examples.push_back(&SafeStackExample::GetInstance());
+	m_examples.push_back(&SwapExample::GetInstance());
 }
 
 ExamplesManager& ExamplesManager::GetInstance() {

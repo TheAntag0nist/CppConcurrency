@@ -27,6 +27,7 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/AccumulateExample.cpp
 	./CppConcurrency/src/examples/MutexExample.cpp
 	./CppConcurrency/src/examples/SafeStackExample.cpp
+	./CppConcurrency/src/examples/SwapExample.cpp
 )
 
 # Source Files
