@@ -1,16 +1,17 @@
 #include <core/ExamplesManager.h>
 
+#include <examples/AccumulateExample.h>
 #include <examples/BaseExample.h>
 #include <examples/CallExample.h>
-#include <examples/JoinExample.h>
-#include <examples/ThreadGuardExample.h>
 #include <examples/DetachExample.h>
-#include <examples/MoveExample.h>
 #include <examples/FullJoinClassExample.h>
-#include <examples/AccumulateExample.h>
+#include <examples/HierarchicalMutexExample.h>
+#include <examples/JoinExample.h>
+#include <examples/MoveExample.h>
 #include <examples/MutexExample.h>
 #include <examples/SafeStackExample.h>
 #include <examples/SwapExample.h>
+#include <examples/ThreadGuardExample.h>
 
 ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&BaseExample::GetInstance());
@@ -24,6 +25,7 @@ ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&MutexExample::GetInstance());
 	m_examples.push_back(&SafeStackExample::GetInstance());
 	m_examples.push_back(&SwapExample::GetInstance());
+	m_examples.push_back(&HierarchicalMutexExample::GetInstance());
 }
 
 ExamplesManager& ExamplesManager::GetInstance() {
