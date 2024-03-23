@@ -1,14 +1,5 @@
 #include <examples/JoinExample.h>
 
-void Func::operator()() {
-	DoSomething();
-}
-
-void Func::DoSomething() {
-	for (uint32_t iter = 0; iter < 500; ++iter)
-		std::cout << "Thread ID: " << value << " " << iter << std::endl;
-}
-
 JoinExample::JoinExample() {
 	m_description = "This is an 'Example of Join'."
 		"It demonstrates how to properly combine a"

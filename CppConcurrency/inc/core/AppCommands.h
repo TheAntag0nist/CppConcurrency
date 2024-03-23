@@ -32,4 +32,11 @@ public:
 	virtual void Execute() override;
 };
 
+class RunExampleCommand : public Command {
+public:
+	RunExampleCommand();
+	virtual ~RunExampleCommand() = default;
+	virtual void Execute() override;
+};
+
 #endif

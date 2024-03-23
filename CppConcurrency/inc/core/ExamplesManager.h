@@ -5,7 +5,7 @@
 
 class ExamplesManager {
 private:
-	std::vector<ExamplePtr> m_examples;
+	std::vector<Example*> m_examples;
 
 protected:
 	ExamplesManager();
@@ -16,7 +16,8 @@ public:
 	~ExamplesManager() = default;
 	static ExamplesManager& GetInstance();
 
-	const std::vector<ExamplePtr>& GetExamples() const;
+	void AddExample(Example& example);
+	const std::vector<Example*>& GetExamples() const;
 };
 
 #endif

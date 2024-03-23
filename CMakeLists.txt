@@ -20,12 +20,22 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/BaseExample.cpp
 	./CppConcurrency/src/examples/CallExample.cpp
 	./CppConcurrency/src/examples/JoinExample.cpp
+	./CppConcurrency/src/examples/ThreadGuardExample.cpp
+	./CppConcurrency/src/examples/DetachExample.cpp
+	./CppConcurrency/src/examples/MoveExample.cpp
+	./CppConcurrency/src/examples/FullJoinClassExample.cpp
+	./CppConcurrency/src/examples/AccumulateExample.cpp
+	./CppConcurrency/src/examples/MutexExample.cpp
+	./CppConcurrency/src/examples/SafeStackExample.cpp
+	./CppConcurrency/src/examples/SwapExample.cpp
+	./CppConcurrency/src/examples/HierarchicalMutexExample.cpp
 )
 
 # Source Files
 set(SOURCE_FILES
 	./CppConcurrency/src/main.cpp
 	./CppConcurrency/src/core/App.cpp
+	./CppConcurrency/src/core/Func.cpp
 	./CppConcurrency/src/core/Example.cpp
 	./CppConcurrency/src/core/Command.cpp
 	./CppConcurrency/src/core/AppCommands.cpp
@@ -36,3 +46,4 @@ set(SOURCE_FILES
 
 # Executable
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
