@@ -29,6 +29,7 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/SafeStackExample.cpp
 	./CppConcurrency/src/examples/SwapExample.cpp
 	./CppConcurrency/src/examples/HierarchicalMutexExample.cpp
+	./CppConcurrency/src/examples/UniqueLockMoveExample.cpp
 )
 
 # Source Files

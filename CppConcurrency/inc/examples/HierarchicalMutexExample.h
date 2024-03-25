@@ -1,5 +1,5 @@
-#ifndef HIERARÑHICAL_MUTEX_EXAMPLE_H
-#define HIERARÑHICAL_MUTEX_EXAMPLE_H
+#ifndef HIERARCHYCAL_MUTEX_EXAMPLE_H
+#define HIERARCHYCAL_MUTEX_EXAMPLE_H
 #include <core/Singleton.h>
 #include <core/Example.h>
 #include <stdafx.h>
@@ -16,7 +16,7 @@ public:
 	HierarchyMutexViolation(const HierarchicalMutex& mutex);
 	HierarchyMutexViolation(const std::string msg) : m_message(msg) {}
 
-	virtual const char* what() const {
+	virtual const char* what() const noexcept {
 		return m_message.c_str();
 	}
 };

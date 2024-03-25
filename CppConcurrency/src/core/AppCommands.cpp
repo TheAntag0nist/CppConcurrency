@@ -58,8 +58,13 @@ void RunExampleCommand::Execute() {
 	uint32_t id = std::stoi(args[0]);
 	auto& examples = examplesManager.GetExamples();
 	
-	if (examples.size() > id)
-		examples[id]->Run();
+	if (examples.size() > id) {
+		std::thread exampleThread(
+			[](Example* ex) { ex->Run(); },
+			std::ref(examples[id])
+		);
+		exampleThread.join();
+	}
 	else {
 		std::cout << "[ERR]:> Invalid Example ID\n";
 		return;
