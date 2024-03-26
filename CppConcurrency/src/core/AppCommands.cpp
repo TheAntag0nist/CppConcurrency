@@ -35,7 +35,6 @@ void ShowExamplesCommand::Execute() {
 	}
 }
 
-
 RunExampleCommand::RunExampleCommand() {
 	m_name = "run_ex";
 	m_description = "run example";

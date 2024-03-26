@@ -3,7 +3,7 @@
 UniqueLockMoveExample::UniqueLockMoveExample() {
 	m_id = m_counter++;
 	m_name = "Move semantics for unique_lock";
-	m_description = "Example with unique_lock move semantics.";
+	m_description = "Example with unique_lock move semantics. It's usefull when you Gateway Class.";
 }
 
 void UniqueLockMoveExample::Run() {

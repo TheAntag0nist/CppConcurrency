@@ -6,10 +6,11 @@
 
 class UniqueLockMoveExample : public Example, public Singleton<UniqueLockMoveExample> {
 protected:
+	UniqueLockMoveExample();
+	friend Singleton<UniqueLockMoveExample>;
 	std::unique_lock<std::mutex> GetLock();
 
 public:
-	UniqueLockMoveExample();
 	virtual ~UniqueLockMoveExample() = default;
 	virtual void Run() override;
 };
