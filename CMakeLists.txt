@@ -32,6 +32,7 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/UniqueLockMoveExample.cpp
 	./CppConcurrency/src/examples/UniqueLockUnlockExample.cpp
 	./CppConcurrency/src/examples/CallOnceExample.cpp
+	./CppConcurrency/src/examples/DnsCacheExample.cpp
 )
 
 # Source Files

@@ -15,6 +15,7 @@
 #include <examples/UniqueLockMoveExample.h>
 #include <examples/UniqueLockUnlockExample.h>
 #include <examples/CallOnceExample.h>
+#include <examples/DnsCacheExample.h>
 
 ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&BaseExample::GetInstance());
@@ -32,6 +33,7 @@ ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&UniqueLockMoveExample::GetInstance());
 	m_examples.push_back(&UniqueLockUnlockExample::GetInstance());
 	m_examples.push_back(&CallOnceExample::GetInstance());
+	m_examples.push_back(&DnsCacheExample::GetInstance());
 }
 
 ExamplesManager& ExamplesManager::GetInstance() {

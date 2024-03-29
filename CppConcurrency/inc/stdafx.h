@@ -1,6 +1,7 @@
 #ifndef STDAFX_H
 #define STDAFX_H
 
+#include <shared_mutex>
 #include <thread>
 #include <mutex>
 
