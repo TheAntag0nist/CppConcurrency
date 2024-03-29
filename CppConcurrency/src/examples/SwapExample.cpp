@@ -8,10 +8,19 @@ void SomeBigObject::Swap(SomeBigObject& obj) {
 	if (this == &obj)
 		return;
 
+	// #Var 1
 	//std::lock(this->m_mutex, obj.m_mutex);
 	//std::lock_guard<std::mutex> firstLock(this->m_mutex, std::adopt_lock);
 	//std::lock_guard<std::mutex> secondLock(obj.m_mutex, std::adopt_lock);
-	std::scoped_lock lockAll(this->m_mutex,obj.m_mutex);
+
+	// #Var 2
+	//std::scoped_lock lockAll(this->m_mutex,obj.m_mutex);
+
+	// #Var 3
+	std::unique_lock firstLock(this->m_mutex, std::defer_lock);
+	std::unique_lock secondLock(obj.m_mutex, std::defer_lock);
+	std::lock(firstLock, secondLock);
+
 	this->m_data.swap(obj.m_data);
 }
 
