@@ -14,6 +14,7 @@
 #include <examples/ThreadGuardExample.h>
 #include <examples/UniqueLockMoveExample.h>
 #include <examples/UniqueLockUnlockExample.h>
+#include <examples/CallOnceExample.h>
 
 ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&BaseExample::GetInstance());
@@ -30,6 +31,7 @@ ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&HierarchicalMutexExample::GetInstance());
 	m_examples.push_back(&UniqueLockMoveExample::GetInstance());
 	m_examples.push_back(&UniqueLockUnlockExample::GetInstance());
+	m_examples.push_back(&CallOnceExample::GetInstance());
 }
 
 ExamplesManager& ExamplesManager::GetInstance() {
