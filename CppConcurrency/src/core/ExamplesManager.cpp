@@ -16,6 +16,7 @@
 #include <examples/UniqueLockUnlockExample.h>
 #include <examples/CallOnceExample.h>
 #include <examples/DnsCacheExample.h>
+#include <examples/ConditionalVariableExample.h>
 
 ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&BaseExample::GetInstance());
@@ -34,6 +35,7 @@ ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&UniqueLockUnlockExample::GetInstance());
 	m_examples.push_back(&CallOnceExample::GetInstance());
 	m_examples.push_back(&DnsCacheExample::GetInstance());
+	m_examples.push_back(&ConditionalVariableExample::GetInstance());
 }
 
 ExamplesManager& ExamplesManager::GetInstance() {

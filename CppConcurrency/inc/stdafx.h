@@ -1,6 +1,7 @@
 #ifndef STDAFX_H
 #define STDAFX_H
 
+#include <condition_variable>
 #include <shared_mutex>
 #include <thread>
 #include <mutex>
@@ -17,6 +18,7 @@
 #include <memory>
 #include <vector>
 #include <stack>
+#include <queue>
 #include <regex>
 #include <array>
 #include <list>

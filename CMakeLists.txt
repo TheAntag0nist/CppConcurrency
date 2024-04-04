@@ -33,6 +33,7 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/UniqueLockUnlockExample.cpp
 	./CppConcurrency/src/examples/CallOnceExample.cpp
 	./CppConcurrency/src/examples/DnsCacheExample.cpp
+	./CppConcurrency/src/examples/ConditionalVariableExample.cpp
 )
 
 # Source Files
