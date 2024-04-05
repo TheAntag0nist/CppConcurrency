@@ -34,6 +34,7 @@ set(EXAMPLES_SOURCE_FILES
 	./CppConcurrency/src/examples/CallOnceExample.cpp
 	./CppConcurrency/src/examples/DnsCacheExample.cpp
 	./CppConcurrency/src/examples/ConditionalVariableExample.cpp
+	./CppConcurrency/src/examples/ThreadSafeQueueExample.cpp
 )
 
 # Source Files

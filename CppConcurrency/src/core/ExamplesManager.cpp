@@ -17,6 +17,7 @@
 #include <examples/CallOnceExample.h>
 #include <examples/DnsCacheExample.h>
 #include <examples/ConditionalVariableExample.h>
+#include <examples/ThreadSafeQueueExample.h>
 
 ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&BaseExample::GetInstance());
@@ -36,6 +37,7 @@ ExamplesManager::ExamplesManager() {
 	m_examples.push_back(&CallOnceExample::GetInstance());
 	m_examples.push_back(&DnsCacheExample::GetInstance());
 	m_examples.push_back(&ConditionalVariableExample::GetInstance());
+	m_examples.push_back(&ThreadSafeQueueExample::GetInstance());
 }
 
 ExamplesManager& ExamplesManager::GetInstance() {
